@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from selenium.webdriver.common.keys import Keys
 import time
 
-
 browser = webdriver.Chrome(executable_path=r'C:\Python27\Scripts\chromedriver.exe')
 browser.get("http://aiproducts.com/index.html") 
 #time.sleep(10)
