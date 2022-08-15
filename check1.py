@@ -12,6 +12,7 @@ req = br.open("https://www.allpartsstore.com/ItemDetl.htm?ResultsList=2103082927
 
 soup = BeautifulSoup(req)
 #print (soup)
+## check your code first
 
 #image_tags = soup.find("img", alt='A-84402652')
 #print(image_tags)
@@ -53,7 +54,7 @@ print(weight)
 ###########WORKING########    
 dataset = [(x.text, y.text) for x,y in zip(part_num, detail)]
 
-with open("output.csv", "w") as csvfile:
+with open("output.csv", "w") as csvfile: #write your file name
     writer = csv.writer(csvfile)
     for data in dataset[:250]: #truncate to 250 rows
         writer.writerow(data)
